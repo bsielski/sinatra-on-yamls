@@ -1,0 +1,16 @@
+<p>ID:</p>
+<p><%= model[:id] %></p>
+<p>DATA:</p>
+<p><%= data %></p>
+<form
+    class=""
+    action=<%= destroy_action %>
+    accept-charset="UTF-8"
+    method="post">
+    <input
+	type="submit"
+	name="commit"
+	value="Destroy"
+	class=""
+	data-disable-with="Save" />
+</form>
