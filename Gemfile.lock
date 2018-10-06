@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (2.3.18)
     cells (4.1.7)
       declarative-builder (< 0.2.0)
       declarative-option (< 0.2.0)
@@ -40,6 +41,8 @@ GEM
     temple (0.8.0)
     tilt (2.0.8)
     uber (0.1.0)
+    yaml_record (0.0.6)
+      activesupport (~> 2.3.11)
 
 PLATFORMS
   x64-mingw32
@@ -49,6 +52,7 @@ DEPENDENCIES
   cells-erb
   rspec (~> 3.8)
   sinatra
+  yaml_record
 
 RUBY VERSION
    ruby 2.5.1p57

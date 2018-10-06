@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem "sinatra"
 
+gem "yaml_record"
+
 gem 'cells-erb'
 gem 'cells'
 
