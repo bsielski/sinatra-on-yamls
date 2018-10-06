@@ -2,6 +2,7 @@ require_relative "./cells/home_page/home_page_cell"
 
 require_relative "./models/note"
 require_relative "./cells/note/note_index_cell"
+require_relative "./cells/note/note_show_cell"
 require_relative "./cells/note/note_new_cell"
 require_relative "./cells/note/note_edit_cell"
 require_relative "./cells/note/note_delete_cell"
@@ -48,4 +49,9 @@ end
 post '/notes/destroy/:id' do
   Note.find(params["id"]).destroy
   redirect to('/notes'), 303
+end
+
+get '/notes/:id' do
+  model = Note.find(params["id"])
+  NoteShowCell.new(model, layout: HtmlLayoutCell).call
 end

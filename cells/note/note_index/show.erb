@@ -2,26 +2,15 @@
     <a href="<%= new_action %>">New Note</a>
     <table>
 	<tr>
-	    <th>id</th>
-	    <th>title</th>
+	    <th>Id</th>
+	    <th>Title</th>
+	    <th>Body</th>
+	    <th></th>
 	    <th></th>
 	    <th></th>
 	</tr>
-	<% model.each do |item| %>
-	    <tr>
-		<td><%= item[:id] %></td>
-		<td><%= item[:title] %></td>
-		<td>
-		    <a href="<%= edit_action(item[:id]) %>">
-			Edit
-		    </a>
-		</td>
-		<td>
-		    <a href="<%= delete_action(item[:id]) %>">
-			Delete
-		    </a>
-		</td>
-	    </tr>
+	<% model.each do |item| %>	    
+	    <%= NoteItemCell.new(item).call %>
 	<% end %>
     </table>
 </div>
