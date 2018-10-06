@@ -1,9 +1,6 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore yaml store files
-/db/tasks/*
-
 # Ignore vendor/bundle
 /vendor/bundle
 

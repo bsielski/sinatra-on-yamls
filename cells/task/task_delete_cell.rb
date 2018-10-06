@@ -17,4 +17,8 @@ class TaskDeleteCell < ::Cell::ViewModel
   def destroy_action
     "/tasks/delete/#{id}"
   end
+
+  def real_destroy_action
+    "/tasks/#{id}"
+  end
 end
