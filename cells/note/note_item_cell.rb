@@ -19,8 +19,16 @@ class NoteItemCell < ::Cell::ViewModel
     model.title
   end
 
+  def trunctated_title
+    BSielski::TrunctateByChar.new(limit: 20, suffix: "...").call(title)
+  end
+
   def body
     model.body
+  end
+
+  def trunctated_body
+    BSielski::TrunctateByChar.new(limit: 20, suffix: "...").call(body)
   end
 
   def show_action
