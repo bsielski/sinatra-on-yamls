@@ -12,7 +12,7 @@ class NoteItemCell < ::Cell::ViewModel
   end
 
   def trunctated_id
-    BSielski::TrunctateByChar.new(limit: 5, suffix: "...").call(id)
+    BSielski::TrunctateByChar.new(limit: 6, suffix: "...").call(id)
   end
 
   def title
@@ -20,7 +20,7 @@ class NoteItemCell < ::Cell::ViewModel
   end
 
   def trunctated_title
-    BSielski::TrunctateByChar.new(limit: 20, suffix: "...").call(title)
+    BSielski::TrunctateByChar.new(limit: 30, suffix: "...").call(title)
   end
 
   def body
@@ -28,7 +28,7 @@ class NoteItemCell < ::Cell::ViewModel
   end
 
   def trunctated_body
-    BSielski::TrunctateByChar.new(limit: 20, suffix: "...").call(body)
+    BSielski::TrunctateByChar.new(limit: 40, suffix: "...").call(body)
   end
 
   def show_action
