@@ -11,7 +11,7 @@ class NoteItemCell < ::Cell::ViewModel
     model.id
   end
 
-  def shorten_id
+  def trunctated_id
     BSielski::TrunctateByChar.new(limit: 5, suffix: "...").call(id)
   end
 
