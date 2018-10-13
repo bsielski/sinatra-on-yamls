@@ -10,6 +10,8 @@ gem "yaml_record"
 gem 'cells-erb'
 gem 'cells'
 
+gem "bsielski-trunctate"
+
 group :development, :test do
   gem "rspec", "~> 3.8"
 end

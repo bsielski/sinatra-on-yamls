@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     activesupport (2.3.18)
+    bsielski-trunctate (0.1.0)
     cells (4.1.7)
       declarative-builder (< 0.2.0)
       declarative-option (< 0.2.0)
@@ -48,6 +49,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bsielski-trunctate
   cells
   cells-erb
   rspec (~> 3.8)
