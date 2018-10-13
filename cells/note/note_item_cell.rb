@@ -1,5 +1,6 @@
 require "cell"
 require "cell/erb"
+require "bsielski/trunctate_by_char"
 
 class NoteItemCell < ::Cell::ViewModel
   self.view_paths = ["cells/note"]
@@ -8,6 +9,10 @@ class NoteItemCell < ::Cell::ViewModel
 
   def id
     model.id
+  end
+
+  def shorten_id
+    BSielski::TrunctateByChar.new(limit: 5, suffix: "...").call(id)
   end
 
   def title
