@@ -5,12 +5,17 @@
     <meta charset="utf-8"/>
     <title>Sinatra on YAMLs</title>
     <script src="/turbolinks.js"></script>
+    <link rel="stylesheet" href="/styles.css">
   </head>
 
-  <body>
-    <a href="/notes">Notes</a>
-    <%= yield %>
-    <footer>
+  <body class="body">
+    <header class="header">
+      <a href="/notes">Notes</a>
+    </header>
+    <main class="main">
+      <%= yield %>
+    </main>
+    <footer class="footer">
       Sinatra on YAMLs <%= version %>
     </footer>
   </body>
